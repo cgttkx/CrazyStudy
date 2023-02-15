@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="msg">Hello , Android!</string>
+
+    <string name="tip">选择图书</string>
+
+    <string name="circle">圆形</string>
+    <string name="square">正方形</string>
+    <string name="rect">长方形</string>
+    <string name="round_rect">圆角矩形</string>
+    <string name="oval">椭圆形</string>
+    <string name="triangle">三角形</string>
+    <string name="pentagon">五边形</string>
+
+    <string name="width_1">1像素</string>
+    <string name="width_3">3像素</string>
+    <string name="width_5">5像素</string>
+    <string name="color_red">红色</string>
+    <string name="color_green">绿色</string>
+    <string name="color_blue">蓝色</string>
+    <string name="color">画笔颜色</string>
+    <string name="width">画笔宽度</string>
+    <string name="blur">模糊效果</string>
+    <string name="emboss">浮雕效果</string>
+
+    <string name="insert">添加生词</string>
+    <string name="search">查找</string>
+    <string name="detail">解释</string>
+    <string name="word_tip">输入生词</string>
+    <string name="word_description">输入生词解释</string>
+    <string name="input_tip">输入单词的部分或全部</string>
+</resources>

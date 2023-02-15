@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 请求获取读取联系人的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+
+        <activity
+            android:name=".nine.ResultActivity" android:exported="true"/>
+        <activity
+            android:name=".nine.ContentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".four.SecondActivity"
+            android:theme="@android:style/Theme.Material.Dialog"
+            tools:targetApi="lollipop" />
+        <activity
+            android:name=".five.SchemeActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_scheme"
+            android:label="指定scheme的Activity">
+            <intent-filter>
+                <action android:name="xx" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 只要Intent的Data属性的scheme是lee，即可启动该Activity -->
+                <data android:scheme="lee" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".five.SchemeHostPortActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_host"
+            android:label="指定scheme、host、port的Activity">
+            <intent-filter>
+                <action android:name="xx" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                只要Intent的Data属性的scheme是lee，且host是www.fkjava.org，
+                port是8888，即可启动该Activity
+                -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:port="8888"
+                    android:scheme="lee" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".five.SchemeHostPathActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_sp"
+            android:label="指定scheme、host、path的Activity">
+            <intent-filter>
+                <action android:name="xx" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                只要Intent的Data属性的scheme是lee，且host是www.fkjava.org，
+                path是/mypath，即可启动该Activity
+                -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:path="/mypath"
+                    android:scheme="lee" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".five.SchemeHostPortPathActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_path"
+            android:label="指定scheme、host、port、path的Activity">
+            <intent-filter>
+                <action android:name="xx" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                需要Intent的Data属性的scheme是lee，且host是www.fkjava.org，
+                port是8888，path是/mypath，才可启动该Activity
+                -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:path="/mypath"
+                    android:port="8888"
+                    android:scheme="lee" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".five.SchemeHostPortPathTypeActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_type"
+            android:label="指定scheme、host、port、path、type的Activity">
+            <intent-filter>
+                <action android:name="xx" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                需要Intent的Data属性的scheme是lee，且host是www.fkjava.org，
+                port是8888，path是/mypath，
+                type是abc/xyz，才可启动该Activity
+                -->
+                <data
+                    android:host="www.fkjava.org"
+                    android:mimeType="abc/xyz"
+                    android:path="/mypath"
+                    android:port="8888"
+                    android:scheme="lee" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".eight.GestureActivity" />
+        <activity android:name=".eight.SQLiteActivity"/>
+        <activity android:name=".eight.FileActivity" />
+        <activity android:name=".eight.SharedPreferencesActivity" />
+        <activity android:name=".seven.AnimatorActivity" />
+        <activity android:name=".seven.MatrixActivity" />
+        <activity android:name=".seven.PinballActivity" />
+        <activity android:name=".seven.DrawBoardActivity" />
+        <activity android:name=".seven.PathActivity" />
+        <activity android:name=".seven.CanvasActivity" />
+        <activity android:name=".seven.BitmapActivity" />
+        <activity android:name=".six.InternationalActivity" />
+        <activity android:name=".six.XmlResActivity" />
+        <activity android:name=".six.ClipdrawableActivity" />
+        <activity android:name=".five.DatatestActivity" />
+        <activity android:name=".four.LifecycleFragmentActivity" />
+        <activity android:name=".four.FragmentTestActivity" />
+        <activity android:name=".four.BundleActivity" />
+        <activity android:name=".four.ResultActivity" />
+        <activity android:name=".four.LifecycleActivity" />
+        <activity android:name=".four.ExpandableListActivityTest" />
+        <activity android:name=".three.AsyncTaskActivity" />
+        <activity android:name=".three.HandlerActivity" />
+        <activity android:name=".three.ConfigurationActivity" />
+        <activity android:name=".two.SpinnerActivity" />
+        <activity android:name=".two.SimpleAdapterActivity" />
+        <activity android:name=".two.ToggleButtonActivity" />
+        <activity android:name=".two.FrameLayoutActivity" />
+        <activity android:name=".View.MainActivity" />
+        <!-- 注册一个ContentProvider -->
+        <provider
+            android:name=".nine.MyContentProvider"
+            android:authorities="com.example.providers.dictprovider"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.example.permission.USE_DICT">
+        </provider>
+
+    </application>
+
+</manifest>
