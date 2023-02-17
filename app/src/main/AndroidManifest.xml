@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.View1">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".twelve.ThreeDActivity"></activity>
+        <activity android:name=".twelve.PolygonActivity" />
+        <activity
+            android:name=".thirteen.TCPActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
