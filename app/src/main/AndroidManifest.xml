@@ -15,8 +15,6 @@
         android:theme="@style/Theme.MyApplication">
 
         <activity
-            android:name=".nine.ResultActivity" android:exported="true"/>
-        <activity
             android:name=".nine.ContentActivity"
             android:exported="true">
             <intent-filter>
@@ -123,8 +121,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".nine.ResultActivity"/>
         <activity android:name=".eight.GestureActivity" />
-        <activity android:name=".eight.SQLiteActivity"/>
+        <activity android:name=".eight.SQLiteActivity" />
         <activity android:name=".eight.FileActivity" />
         <activity android:name=".eight.SharedPreferencesActivity" />
         <activity android:name=".seven.AnimatorActivity" />
@@ -151,16 +150,13 @@
         <activity android:name=".two.SimpleAdapterActivity" />
         <activity android:name=".two.ToggleButtonActivity" />
         <activity android:name=".two.FrameLayoutActivity" />
-        <activity android:name=".View.MainActivity" />
-        <!-- 注册一个ContentProvider -->
+        <activity android:name=".View.MainActivity" /> <!-- 注册一个ContentProvider -->
         <provider
             android:name=".nine.MyContentProvider"
             android:authorities="com.example.providers.dictprovider"
             android:enabled="true"
             android:exported="true"
-            android:permission="com.example.permission.USE_DICT">
-        </provider>
-
+            android:permission="com.example.permission.USE_DICT"></provider>
     </application>
 
 </manifest>
